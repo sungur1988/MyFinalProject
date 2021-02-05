@@ -17,9 +17,15 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
-        
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
 
-       
+        public void Delete(Product product)
+        {
+            _productDal.Delete(product);
+        }
 
         public List<Product> GetAll()
         {
