@@ -33,11 +33,22 @@ namespace ConsoleUI
             ProductManager productManager = new ProductManager(new EfProductDal());
             //productManager.Add(new Product { CategoryId=2,ProductName="Cihan",UnitPrice=1000,UnitsInStock=1 });
 
-          
-            foreach (var item in productManager.GetProductDetails())
+            var result = productManager.GetAll();
+
+            if (result.Success)
             {
-                Console.WriteLine(item.ProductName +"--------" + item.CategoryName);
+                foreach (var item in result.Data)
+                {
+                    Console.WriteLine(item.ProductName );
+                }
+                Console.WriteLine(result.Message);
+
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+            
         }
     }
 }
