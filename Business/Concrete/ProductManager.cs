@@ -2,15 +2,12 @@
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using DataAccess.Abstract;
 using Entities.DTOs;
 using Core.Utilities.Results;
 using Business.Constants;
-using FluentValidation;
 using Business.ValidationRules.FluentValidation;
-using Core.CrossCuttingConcerns.Validation;
-using Core.Aspects.Autofac.Validation;
+using Core.Aspects.Autofac;
 
 namespace Business.Concrete
 {
